@@ -1,0 +1,18 @@
+class ss {
+    constructor(bodyA,bodyB){
+        var options = {
+            bodyA: bodyA,
+            bodyB: bodyB,
+            stiffeness: 0.04,
+            length:10
+        }
+        this.sling = Constraint.create(options)
+        World.add(world,this.sling)
+    
+      
+    }
+    display(){
+        strokeWeight(10); 
+        line(this.sling.bodyA.position.x,this.sling.bodyA.position.y,this.sling.bodyB.position.x,this.sling.bodyB.position.y)
+    }
+}
